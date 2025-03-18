@@ -1,177 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhiyuan Wei's 个人简历</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .info-title {
-            font-size: 2.0em;
-            color: #000;
-        }
-
-        h1,
-        h2 {
-            color: #333;
-        }
-
-        h1 {
-            font-family: 'Pacifico', cursive;
-            font-size: 2.5em;
-        }
-
-        h2 {
-            font-family: 'Pacifico', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 2em;
-
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: #e4e4e4;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        section {
-            margin-bottom: 20px;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #333;
-            margin: 20px 0;
-        }
-    </style>
+    <title>信息科学技术学院门户网站</title>
+    <link rel="stylesheet" href="door.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="main-head">
+    <!-- 导航栏 -->
+    <div id="top" class="top-container">
+        <div class="search">
+            <img src="./images/search-btn.png" alt="search">
+            <input type="text" placeholder="搜索">
 
         </div>
+        <ul class="toplinks clearfix">
+            <li><a href="https://www.pku.edu.cn">PKU</a></li>
+            <li><a href="https://portal.eecs.pku.edu.cn">院内门户</a></li>
+            <li><a href="https://eecs.pku.edu.cn/en/">English</a></li>
 
-        <div class="main-content">
-            <div class="user-info">
-                <div class="info">
-                    <div>
-                        <img class="lazy-load" src="./photos/Profile.png" alt="My Portraiture"
-                            style="width: 150px; float: left; margin-right: 20px;" />
-                    </div>
-                    <div class="info-right">
+        </ul>
 
-                        <div class="info-title"><b>Zhiyuan Wei</b></div>
-                        <p>
-                            <b>Identity:</b>
-                            An undergraduate student at
-                            <a href="https://english.pku.edu.cn/">Peking University</a>
-                        </p>
-                        <p>
-                            <b>Born Date:</b> 2005-06-02
-                        </p>
-                        <p>
-                            <b>Study:</b> Major in Computer Science at School of Electronics Engineering and Computer
-                            Science .
-                        </p>
+    </div>
+    <!-- 页内header -->
+    <div class="header">
 
 
-                    </div>
-                </div>
+        <img src="./images/logo.png" alt="Logo" class="logo" ,>
+        <div class="inner-nav clearfix">
+            <ul>
+                <li><a href="#news">新闻&动态</a></li>
+                <li><a href="#lectures">讲座&信息</a></li>
+                <li><a href="#footer">尾注</a></li>
+            </ul>
+        </div>
+    </div>
 
-                <div class="decs">
-                    <section>
-                        <h1>
-                            <font color="Green">About me</font>
-                        </h1>
-                        <section>
-                            <h2>
-                                <font color="purple">Some Basic Information</font>
-                            </h2>
-                            <p>
-                                I am a student at <b><i>University</i></b>, majoring in Computer Science. I am
-                                interested in
-                                programming and web development. I am currently learning web development and I am very
-                                happy
-                                to
-                                share my learning experience with you if you are intrigued by my project.
-                            </p>
-                            <p>
-                                I am also a member of the <b><i>Tennis Club</i></b> at my school. I have participated in
-                                many
-                                tennis competitions and have won many awards. I am very happy to share my experience in
-                                robotics with you.
-                            </p>
-                        </section>
-                        <section>
-                            <h2>
-                                <font color="purple">My Hobbies</font>
-                            </h2>
-                            <p>
-                                I have a variety of hobbies that keep me engaged and motivated. Some of my favorite
-                                activities include:
+    <!-- 内容部分 -->
+    <div class="main-container">
+        <!--这里是一个板块的内容-->
+        <div id="news" class="content1">
+            <!--第一个板块的title-->
+            <div class="content-title">
+                <h2>新闻&动态</h2>
+            </div>
+            <!--新闻内容-->
+            <div class="index-news clearfix">
+                <div class="news-pic">
+                    <ul>
+                        <li>
+                            <div class="box">
+                                <div class="pic">
+                                    <a href="https://eecs.pku.edu.cn/info/1040/6883.htm">
+                                        <img alt="" src="./images/news1.png"></a>
+                                </div>
+                                <div class="text">
+                                    <a href="https://eecs.pku.edu.cn/info/1040/6883.htm" class="tit"
+                                        title="北京大学信息科学技术学院举办2024级班主任聘任会">北京大学信息科学技术学院举办2024级班主任聘任会</a>
 
-                            <ul>
-                                <li>Playing Tennis: I enjoy playing tennis and have been part of my school's tennis club
-                                    for several years.</li>
-                                <li>Reading: I love reading books, especially those related to technology and science
-                                    fiction.</li>
-                                <li>Traveling: Exploring new places and experiencing different cultures is something I
-                                    am passionate about.</li>
-                                <li>Gaming: I enjoy playing strategy and puzzle games in my free time.</li>
-                            </ul>
-                            </p>
-                        </section>
-                        <section>
-                            <h2><font color = "purple">My Skills</font></h2>
-                            <ul>
-                                <li>Programming Languages: Java, Python, JavaScript, C++</li>
-                                <li>Web Development: HTML, CSS, JavaScript, React</li>
-                                <li>Database Management: MySQL, MongoDB</li>
-                                <li>Tools: Git, Docker, Jenkins</li>
-                                <li>Operating Systems: Windows, Linux, macOS</li>
-                                <li>AI: TensorFlow, Keras, PyTorch</li>
-                            </ul>
-                        </section>
-                        <section>
-                            <h2><font color ="orange"> btw </font></h2>
-                            <p>
-                                I am a fan of <a href="https://generals.io" target="_blank">generals</a>. I often play
-                                the game for in my leisure time.
-                                Welcome to play with me.
-                            </p>
-                        </section>
-                    </section>
+                                    为强化班级管理队伍建设，部署新学期学生重点工作，推动教育教学高质量发展，3月13日中午，北京大学信息科学技术学院召开2024级班主任聘任会。学院党委书记严敏杰、教学办公室主任董晓晖、学生工作办公室主任李子奇、2024级年级辅导员付晓倩及2024级班主任参会，会议由学院党委副书记贾方健主持。会议伊始，学院党委书记严敏杰为2024级13位班主任老师依次颁发聘任书，红底烫金的聘书承载着学院的重托，当班主任们郑重接过聘书时...
+
+                                    <div class="date">2025-03-15</div>
+                                    <a class="more" href="https://eecs.pku.edu.cn/info/1040/6883.htm">查看详细</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box">
+                                <div class="pic">
+
+                                    <img alt="" src="./images/news2.png">
+                                </div>
+                                <div class="text">
+                                    <a href="https://eecs.pku.edu.cn/info/1040/6880.htm" class="tit"
+                                        title="北京大学信息科学技术学院举办彭练矛院士讲座暨“信班”主题班会">北京大学信息科学技术学院举办彭练矛院士讲座暨“信班”主题班会</a>
+
+                                    为深入贯彻落实党的二十届三中全会精神和全国教育大会精神，积极响应北京大学“科技创新年”战略部署，落实北京大学电子信息科学类实验班“信班”建设指导委员会具体工作，2025年3月11日下午，北京大学信息科学技术学院在理科一号楼1127室学生创新活动空间举办彭练矛院士讲座暨“信班”主题班会。中国科学院院士、北京大学电子学院院长、北京大学“信班”建设指导委员会委员彭练矛教授讲授主题讲座并和师生见面座谈。信息科学技...
+
+                                    <div class="date">2025-03-14</div>
+                                    <a class="more" href="https://eecs.pku.edu.cn/info/1040/6880.htm">查看详细</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="box">
+                                <div class="pic">
+                                    <img alt="" src="./images/news3.png">
+                                </div>
+                                <div class="text">
+                                    <a href="https://eecs.pku.edu.cn/info/1040/6872.htm" class="tit"
+                                        title="聚焦科技创新 培育新质人才|信息科学技术学院组织学生赴学而思参访学习">聚焦科技创新
+                                        培育新质人才|信息科学技术学院组织学生赴学而思参访学习</a>
+
+                                    2025年3月6日，信息科学技术学院组织学生赴学而思开展参访学习。学院学工办付晓倩老师带队参加活动，学生工作办公室主任李子奇组织活动开展。党的二十届三中全会强调，教育、科技、人才是中国式现代化的基础性、战略性支撑。此次活动旨在通过考察教育科技前沿应用、体验智慧教育场景、对话行业前辈专家，帮助同学们深化对教育科技行业发展趋势的认知，助力我院学子把握智能时代教育行业发展新机遇。活动伊始，工作人员对我院师...
+
+                                    <div class="date">2025-03-13</div>
+                                    <a class="more" href="https://eecs.pku.edu.cn/info/1040/6872.htm">查看详细</a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
                 </div>
 
             </div>
+
         </div>
-    </div>
+
+        <div id="lectures" class="content2">
+
+            <div class=" content-title">
+                <h2>讲座&信息</h2>
+            </div>
+            <div class="tzxxcontent clearfix">
+                <ul>
+                    <li>
+                        <a href="https://eecs.pku.edu.cn/info/1047/6853.htm">
+                            <div class="date">
+                                <p class="infoname">学工</p>
+                                <p class="day">2025-03-06</p>
+                            </div>
+                            <div class="tit">“信谈1024”| 活动报名：信科党政班子师生面对面活动【2025年第三期（总第33期）】</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://eecs.pku.edu.cn/info/1047/6843.htm">
+                            <div class="date">
+                                <p class="infoname">学工</p>
+                                <p class="day">2025-02-25</p>
+                            </div>
+                            <div class="tit">信息科学技术学院2025年春季学期心理咨询预约方式通知</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://eecs.pku.edu.cn/info/1047/6792.htm">
+                            <div class="date">
+                                <p class="infoname">学工</p>
+                                <p class="day">2025-02-19</p>
+                            </div>
+                            <div class="tit">“信谈1024”| 活动报名：【2025年第二期·学院学生行政办公工作建议专题（总第32期）】信科党政班子师生面对面活动</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://eecs.pku.edu.cn/info/1047/6791.htm">
+                            <div class="date">
+                                <p class="infoname">学工</p>
+                                <p class="day">2025-02-18</p>
+                            </div>
+                            <div class="tit">信息科学技术学院（本科生学院）学生助理招新通知</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://eecs.pku.edu.cn/info/1047/6763.htm">
+                            <div class="date">
+                                <p class="infoname">学工</p>
+
+                                <p class="day">2025-01-06</p>
+
+                            </div>
+                            <div class="tit">“信谈1024”| 活动报名：【2025年第一期（总第31期）】信科党政班子师生面对面活动</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://eecs.pku.edu.cn/info/1044/6752.htm">
+                            <div class="date">
+                                <p class="infoname">学院</p>
+                                <p class="day">2025-01-02</p>
+
+                            </div>
+                            <div class="tit" style="font-weight:bold;">信息科学技术学院2025年寒假值班表</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer id="footer">
+            <ul>
+                <li><a href="http://www.moe.gov.cn">教育部</a></li>
+                <li><a href="http://www.dean.pku.edu.cn">北大教务部</a></li>
+                <li><a href="https://eelab.pku.edu.cn">基础实验研究中心</a></li>
+            </ul>
+        </footer>
+
+        <!-- Final_Footer -->
+        <div class="final-footer">
+            <p>地址:北京市海淀区颐和园路5号</p>
+            <p>电话:010-6275xxxx</p>
+            <p>邮编:100871</p>
+        </div>
+
+        <!-- 返回顶部按钮 -->
+        <div class="back-to-top" onclick="scrollToTop()">
+
+            <a href="#top"><img src="./images/backtotop.png"></a>
+        </div>
+
+
 </body>
 
 </html>
