@@ -1,1 +1,0 @@
-# 这是一个低仿pku-eecs-school的界面

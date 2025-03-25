@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捉蝴蝶小游戏</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <h1>捉蝴蝶小游戏</h1>
+    <div class="top-bar">
+        <button class="top-button" onclick="showGameRules()">游戏规则</button>
+        <button class="top-button" onclick="showAbout()">关于</button>
+    </div>
+
+    <div class="game-container">
+        <div class="butterfly">
+            <img src="images/Butterfly.jpg">
+        </div>
+    </div>
+    <!-- 确保 images 文件夹中有 heart.png 图片 -->
+
+    <div class="score-display">得分：<span id="score">0</span></div>
+    <button class="start-button">开始游戏</button>
+    <script src="game.js"></script>
+</body>
+
+</html>
