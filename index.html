@@ -1,31 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>捉蝴蝶小游戏</title>
-    <link rel="stylesheet" href="game.css">
+    <title>祝黄梓涵20岁生日快乐!</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <h1>捉蝴蝶小游戏</h1>
-    <div class="top-bar">
-        <button class="top-button" onclick="showGameRules()">游戏规则</button>
-        <button class="top-button" onclick="showAbout()">关于</button>
-    </div>
-
-    <div class="game-container">
-        <div class="butterfly">
-            <img src="images/Butterfly.jpg">
+    <div class="birthday-container">
+        <!-- 背景装饰 -->
+        <div class="balloons">
+            <div class="balloon balloon-1"></div>
+            <div class="balloon balloon-2"></div>
+            <div class="balloon balloon-3"></div>
+            <div class="balloon balloon-4"></div>
+            <div class="balloon balloon-5"></div>
         </div>
+
+        <!-- 彩带装饰 -->
+        <div class="confetti-container" id="confetti-container"></div>
+
+        <!-- 主要内容 -->
+        <main class="main-content">
+            <div class="birthday-card">
+                <div class="card-header">
+                    <h1 class="main-title">🎉 生日快乐 🎉</h1>
+                    <div class="sparkle sparkle-1">✨</div>
+                    <div class="sparkle sparkle-2">⭐</div>
+                    <div class="sparkle sparkle-3">💫</div>
+                </div>
+                
+                <div class="birthday-name">
+                    <h2>黄梓涵</h2>
+                    <div class="age-display">
+                        <span class="age-number">20</span>
+                        <span class="age-text">岁</span>
+                    </div>
+                </div>
+
+                <div class="birthday-message">
+                    <p>🎂 今天是你的特别日子 🎂</p>
+                    <p>愿你的20岁充满欢声笑语</p>
+                    <p>愿所有的美好都如约而至</p>
+                    <p>愿你永远年轻，永远热泪盈眶</p>
+                    <p>🌟 生日快乐！🌟</p>
+                </div>
+
+                <div class="cake-container">
+                    <div class="birthday-cake" id="birthday-cake">
+                        <div class="cake-base"></div>
+                        <div class="cake-middle"></div>
+                        <div class="cake-top"></div>
+                        <div class="candle candle-1">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle candle-2">
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-buttons">
+                    <button class="btn btn-primary" id="blow-candles">吹灭蜡烛 🕯️</button>
+                    <button class="btn btn-secondary" id="play-music">播放生日歌 🎵</button>
+                    <button class="btn btn-special" id="surprise">惊喜！🎁</button>
+                </div>
+
+                <div class="birthday-wishes">
+                    <h3>💌 生日祝福 💌</h3>
+                    <div class="wish-item">🎈 祝你身体健康，学习进步</div>
+                    <div class="wish-item">🌈 祝你笑容常在，快乐无忧</div>
+                    <div class="wish-item">⭐ 祝你前程似锦，未来可期</div>
+                    <div class="wish-item">💝 祝你心想事成，梦想成真</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 音乐播放器（隐藏） -->
+        <audio id="birthday-song" preload="auto">
+            <!-- 这里可以添加生日歌音频文件 -->
+        </audio>
     </div>
-    <!-- 确保 images 文件夹中有 heart.png 图片 -->
 
-    <div class="score-display">得分：<span id="score">0</span></div>
-    <button class="start-button">开始游戏</button>
-    <script src="game.js"></script>
+    <script src="index.js"></script>
 </body>
-
 </html>
