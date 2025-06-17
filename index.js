@@ -62,9 +62,6 @@ function initializeButtons() {
     playMusicBtn.addEventListener('click', function() {
         playBirthdaySong();
         this.textContent = '正在播放... 🎵';
-        setTimeout(() => {
-            this.textContent = '播放生日歌 🎵';
-        }, 3000);
     });
     
     // 惊喜功能
@@ -101,45 +98,32 @@ function restoreCandles() {
     });
 }
 
-// 播放生日歌（模拟）
+// 播放生日歌
 function playBirthdaySong() {
-    // 创建音频上下文来模拟音乐播放
-    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const audio = new Audio('image/bir.mp3');
     
-    // 简单的音符频率（生日快乐歌的前几个音符）
-    const notes = [261.63, 261.63, 293.66, 261.63, 349.23, 329.63]; // C C D C F E
+    // 设置音量
+    audio.volume = 0.7;
     
-    let currentNote = 0;
-    
-    function playNote() {
-        if (currentNote >= notes.length) return;
+    // 播放音频
+    audio.play().then(() => {
+        console.log('生日歌开始播放');
+        // 添加音乐播放视觉效果
+        document.body.style.animation = 'musicPulse 0.6s ease-in-out infinite';
         
-        const oscillator = audioContext.createOscillator();
-        const gainNode = audioContext.createGain();
+        // 音乐结束时停止视觉效果
+        audio.addEventListener('ended', () => {
+            document.body.style.animation = '';
+            const playMusicBtn = document.getElementById('play-music');
+            playMusicBtn.textContent = '播放生日歌 🎵';
+        });
         
-        oscillator.connect(gainNode);
-        gainNode.connect(audioContext.destination);
-        
-        oscillator.frequency.setValueAtTime(notes[currentNote], audioContext.currentTime);
-        oscillator.type = 'sine';
-        
-        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-        
-        oscillator.start(audioContext.currentTime);
-        oscillator.stop(audioContext.currentTime + 0.5);
-        
-        currentNote++;
-        
-        if (currentNote < notes.length) {
-            setTimeout(playNote, 600);
-        }
-    }
-    
-    playNote();
-    
-    // 添加音乐播放视觉效果
-    document.body.style.animation = 'musicPulse 0.6s ease-in-out 6';
+    }).catch(error => {
+        console.error('音频播放失败:', error);
+        alert('音频文件加载失败，请确保 image/bir.mp3 文件存在');
+        const playMusicBtn = document.getElementById('play-music');
+        playMusicBtn.textContent = '播放生日歌 🎵';
+    });
 }
 
 // 惊喜效果
