@@ -100,7 +100,7 @@ function restoreCandles() {
 
 // 播放生日歌
 function playBirthdaySong() {
-    const audio = new Audio('image/bir.mp3');
+    const audio = new Audio('images/bir.mp3');
     
     // 设置音量
     audio.volume = 0.7;
@@ -120,7 +120,7 @@ function playBirthdaySong() {
         
     }).catch(error => {
         console.error('音频播放失败:', error);
-        alert('音频文件加载失败，请确保 image/bir.mp3 文件存在');
+        alert('音频文件加载失败，请确保 images/bir.mp3 文件存在');
         const playMusicBtn = document.getElementById('play-music');
         playMusicBtn.textContent = '播放生日歌 🎵';
     });
